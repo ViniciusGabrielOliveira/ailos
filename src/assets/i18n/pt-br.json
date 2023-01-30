@@ -1,0 +1,45 @@
+{
+    "head": {
+        "title": "NOVA ADMISSÃO COOPERADO",
+        "description": "Cadastro / Admissão do Cooperado / Nova Admissão do Cooperado",
+        "button": "VIACRED"
+    },
+    "body": {
+        "title": "Informe o CPF do futuro cooperado (a)",
+        "description": "Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. \n Digite apenas os números (sem pontos ou traços).",
+        "label-cpf": "CPF",
+        "error-cpf": "CPF Inválido!",
+        "button-cpf": "Consultar por CPF",
+        "card": {
+            "title": "Situação cadastral do CPF",
+            "description": "Consulta na Receita Federal",
+            "name": "Nome",
+            "status-label": "Situação do CPF",
+            "status": {
+                "regular": "Regular",
+                "irregular": "Irregular"
+            },
+            "account": {
+                "title-invest": "Conta Aplicação",
+                "title-current": "Conta Corrente",
+                "description": "Cooperativa Viacred",
+                "label": "Número da Conta",
+                "button": "Duplicar Conta"
+            }
+        },
+        "stepper": {
+            "1": "Início",
+            "2": "Documentos",
+            "3": "Dados Cadastrais",
+            "4": "Admissão"
+        },
+        "empty": {
+            "title": "Este Cpf não foi encontrado!",
+            "description": "Por favor utilize um de nossos cpf cadastrados para teste:",
+            "cpfs": "77617028377, 20701729295, 18578409175, 89578873263"
+        }
+    },
+    "card": {
+        "title": ""
+    }
+}

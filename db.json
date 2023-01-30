@@ -1,0 +1,40 @@
+{
+    "cooperates": [
+        {
+            "cpf": 77617028377,
+            "name": "Ana Maria",
+            "status": "regular",
+            "accounts": [
+                {
+                    "accountType": "invest",
+                    "number": "557932-4"
+                },
+                {
+                    "accountType": "current",
+                    "number": "557933-1"
+                }
+            ]
+        },
+        {
+            "cpf": 20701729295,
+            "name": "João Assis",
+            "status": "regular",
+            "accounts": [
+                {
+                    "accountType": "current",
+                    "number": "584532-7"
+                }
+            ]
+        },
+        {
+            "cpf": 18578409175,
+            "name": "Roberto Barbosa",
+            "status": "irregular"
+        },
+        {
+            "cpf": 89578873263,
+            "name": "Joaquim Sousa",
+            "status": "regular"
+        }
+    ]
+}

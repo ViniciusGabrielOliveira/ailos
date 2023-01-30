@@ -1,0 +1,36 @@
+<div class="container">
+
+	<app-menu></app-menu>
+
+	<div class="body">
+		<app-head></app-head>
+
+		<div class="content">
+            <div class="container-stepper">
+                <app-stepper [stepper]="stepper"></app-stepper>
+            </div>
+			<h1 class="title">{{ 'body.title' | translate }}</h1>
+			<p class="description">{{ 'body.description' | translate }}</p>
+			<form class="form" [formGroup]="formCpf">
+				<app-input
+					formControlName="cpf"
+					width="300px"
+					placeholder="000.000.000-00"
+					mask="000.000.000-00"
+                    [error]="'body.error-cpf' | translate"
+					[label]="'body.label-cpf' | translate" >
+				</app-input>
+                <app-button (click)="getCpfStatus()" [loading]="loadingCpfStatus$ | async" [caption]="'body.button-cpf' | translate">
+                </app-button>
+			</form>
+            <div class="container-cards">
+                <app-card-cpf *ngFor="let item of cardsCpf$ | async" [cardCpf]="item"></app-card-cpf>
+            </div>
+            <div *ngIf="(cardsCpf$ | async)?.length === 0" class="container-empty">
+			    <h1 class="title important">{{ 'body.empty.title' | translate }}</h1>
+                <p class="description">{{ 'body.empty.description' | translate }}</p>
+                <p class="description">{{ 'body.empty.cpfs' | translate }}</p>
+            </div>
+		</div>
+	</div>
+</div>

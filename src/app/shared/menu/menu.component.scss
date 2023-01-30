@@ -1,0 +1,32 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+.container
+{
+    background-color: $primary;
+    width: 70px;
+    height: calc(100% - 30px);
+    min-height: 430px;
+    padding-top: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo
+{
+    width: 45px;
+    margin-bottom: 25px;
+}
+
+.icon
+{
+    width: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.icon:hover
+{
+    background-color: rgba(255, 255, 255, 0.164);
+}

@@ -1,0 +1,34 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 50px;
+    width: calc(100% - 40px);
+    background-color: $clear;
+}
+
+.container-title
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.title
+{
+    @include title-head;
+}
+
+.description
+{
+    @include font-12;
+    color: $gray-6;
+}

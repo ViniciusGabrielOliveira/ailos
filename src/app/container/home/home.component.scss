@@ -1,0 +1,60 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.body
+{
+    background-color: #E7EEF1;
+    flex-grow: 1;
+}
+
+.content
+{
+    padding: 25px;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-stepper
+{
+    width: 50%;
+    padding: 0 25%;
+}
+
+.title
+{
+    @include title;
+    color: $dark;
+    margin-top: 30px;
+}
+
+.description
+{
+    @include font-11;
+    color: $gray-7;
+    max-width: 570px;
+}
+
+.important
+{
+    color: $important
+}
+
+.container-cards
+{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}

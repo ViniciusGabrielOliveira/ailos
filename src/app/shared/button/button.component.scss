@@ -1,0 +1,130 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+:host
+{
+    pointer-events: none;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button style reset */
+button
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 0 10px;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+
+    /* Remove excess padding and border in Firefox 4+ */
+    &::-moz-focus-inner
+    {
+        border: 0;
+        padding: 0;
+    }
+
+    &:focus
+    {
+        outline: 0;
+    }
+}
+
+.loading
+{
+    pointer-events: none;
+}
+
+.primary
+{
+    color: $clear;
+    @include font-14;
+    background: $primary;
+    height: 48px;
+    border-radius: 2px;
+    font-size: 12px;
+    min-width: 157px;
+
+    ::ng-deep mat-spinner.mat-spinner circle
+    {
+        stroke: $primary-clear !important;
+    }
+}
+
+.primary-thin
+{
+    @extend .primary;
+    padding-left: 10px;
+    min-width: 55px;
+}
+
+.stretch
+{
+    height: 54px;
+}
+
+.simple
+{
+    @extend .primary;
+    min-width: initial;
+    padding: 15px 20px;
+
+    i
+    {
+        // Necessary to override the fxLayoutGap
+        margin-right: 0 !important;
+    }
+}
+
+.secondary
+{
+    @extend .primary;
+    background: $primary-clear;
+    color: $dark;
+}
+
+.secondary-border
+{
+    @extend .primary;
+    background: none;
+    color: none;
+    border: 2px solid $primary;
+}
+
+.mat-mdc-progress-spinner
+{
+    --mdc-circular-progress-active-indicator-color: #ffffff;
+}
+
+@media screen and (max-width: #{510px})
+{
+    .primary
+    {
+        min-width: auto;
+    }
+}

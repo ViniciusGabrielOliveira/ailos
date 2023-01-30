@@ -1,0 +1,6 @@
+<div class="stepper-wrapper" [style]="'width: ' + width">
+    <div *ngFor="let item of stepper" [class]="'stepper-item ' + item.status">
+        <div class="step-counter"></div>
+        <div class="step-name">{{ item.label }}</div>
+    </div>
+</div>

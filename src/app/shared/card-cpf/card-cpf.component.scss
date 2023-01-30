@@ -1,0 +1,55 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    width: 270px;
+    background-color: $clear;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    min-height: 160px;
+}
+
+.container-title
+{
+    padding: 0;
+}
+
+.title
+{
+    @include font-14-bold;
+}
+
+.description
+{
+    @include font-11;
+    color: $gray-6;
+}
+
+.icon
+{
+    width: 16px;
+    height: 16px;
+}
+
+.container-icon
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 23px;
+}
+
+.button-link
+{
+    @include font-14-bold;
+    color: $primary;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-top: 17px;
+}

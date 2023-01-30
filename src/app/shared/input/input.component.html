@@ -1,0 +1,23 @@
+<div [style.width]="width">
+    <form class="form">
+        <mat-form-field class="full-width"
+            [hideRequiredMarker]="hideRequiredMarker">
+
+            <mat-label>{{ label }}</mat-label>
+
+            <input
+                matInput
+                [mask]="mask"
+                [placeholder]="placeholder"
+                [formControl]="resolvedFormControl"
+                autocomplete="nope"
+                autocomplete="off"
+                [required]="isRequired"
+                #field />
+
+            <mat-hint *ngIf="hint">{{ hint }}</mat-hint>
+
+            <mat-error *ngIf="resolvedFormControl">{{ error || currentDefaultFormError }}</mat-error>
+        </mat-form-field>
+    </form>
+</div>

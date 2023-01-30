@@ -1,0 +1,53 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+::ng-deep.mat-snack-bar-container
+{
+    color: $clear;
+    background: transparent;
+    box-shadow:none;
+}
+
+@mixin base($color, $background, $lblColor)
+{
+    color: $color;
+    background: $background;
+    @include font-12;
+    border-radius: 5px;
+    padding: 7px 15px;
+    min-height: 48px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+    label
+    {
+        @include font-14;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 16px;
+        border-radius: 10px;
+        color: $lblColor;
+        &:active
+        {
+            background-color: $dark;
+        }
+    }
+}
+
+.default
+{
+    @include base(rgba($clear, .7), $dark, $primary);
+}
+
+.success
+{
+    @include base($clear, $primary, $clear);
+}
+
+.warning
+{
+    @include base($clear, $important, $clear);
+}

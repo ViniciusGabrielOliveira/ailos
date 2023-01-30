@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="container-title">
+        <p *ngIf="cardCpf?.title" class="title"> {{ cardCpf.title?.substring(0, 32) }} </p>
+        <p *ngIf="cardCpf?.description" class="description"> {{ cardCpf.description?.substring(0, 41) }} </p>
+    </div>
+    <div *ngFor="let item of cardCpf?.lines" class="container-icon">
+        <img *ngIf="item?.icon" class="icon" [src]="'../../../assets/icons/' + item.icon">
+        <div class="container-icon-title">
+            <p *ngIf="item?.label" class="description"> {{ item.label }} </p>
+            <p *ngIf="item?.value" class="title"> {{ item.value }} </p>
+        </div>
+    </div>
+    <a MatRipple class="button-link" *ngIf="cardCpf?.labelButton"> {{ cardCpf.labelButton }}</a>
+</div>

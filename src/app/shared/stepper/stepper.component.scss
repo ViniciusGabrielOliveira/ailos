@@ -1,0 +1,89 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+.stepper-wrapper
+{
+    @include font-14;
+    display: flex;
+    justify-content: space-between;
+    color: $gray-4;
+    text-align: center;
+}
+
+.stepper-item
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 1;
+
+    @media (max-width: 768px)
+    {
+        font-size: 12px;
+    }
+}
+
+.stepper-item::after
+{
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid $gray-2;
+    width: 100%;
+    top: 9px;
+    z-index: 2;
+    left: 50%;
+}
+
+.stepper-item .step-counter
+{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: $gray-2;
+    margin-bottom: 3px;
+}
+
+.stepper-item.active
+{
+    color: $primary;
+}
+
+.stepper-item.completed
+{
+    color: $primary;
+}
+
+.stepper-item.completed .step-counter
+{
+    background-color: $primary;
+}
+
+.stepper-item.active .step-counter
+{
+    background-color: $primary-clear;
+    width: 14px;
+    height: 14px;
+    border: 2px solid $primary;
+}
+
+.stepper-item:first-child::before
+{
+    content: none;
+}
+
+.stepper-item:last-child::after
+{
+    content: none;
+}
+
+.step-name
+{
+    margin-top: 12px;
+}
